@@ -12,6 +12,10 @@ public class SistemaInicial {
 
     public SistemaInicial() {
         this.run = true;
+        init();
+    }
+
+    public void init() {
         catalagoDeJogo = new CatalagoDeJogo();
         while(run) {
             IO.output("1. Cadastro de jogo de tabuleiro\n2. Cadastro de jogo de video game.\n3. cadastro de jogo de rua.\n4. Listar os jogos.\n5. sair do sistema");
@@ -72,17 +76,17 @@ public class SistemaInicial {
             );
             catalagoDeJogo.getCatalagoJogos().add(jogoDeRua);
         }catch (RuntimeException e) {
-            IO.output("opção invaida.");
+            IO.output(e.getMessage());
         }
     }
 
-    private LocalparaBrinca verificarJogoDeRuaLocal(String local) {
+    private LocalparaBrinca verificarJogoDeRuaLocal(String local)  {
         if (local.equalsIgnoreCase("cidade")) {
             return LocalparaBrinca.CIDADE;
         } else if (local.equalsIgnoreCase("litoral")) {
             return LocalparaBrinca.LITORAL;
         } else {
-            throw new RuntimeException();
+            throw new RuntimeException("Local inválido!");
         }
     }
 
@@ -92,8 +96,9 @@ public class SistemaInicial {
         } else if (resposta.equalsIgnoreCase("nao")) {
             return false;
         } else {
-            throw new RuntimeException();
+             throw new RuntimeException("não foi informado se o jogo é perigoso!");
         }
+
     }
 
     private boolean verificarJogoVideoGameonline(String resposta) {
