@@ -1,8 +1,12 @@
 package br.dev.rvz;
 
+/**
+ * modelo de tipo de jogos principal
+ * @author Rodrigo.vaz
+ * */
 public class Jogo {
     private String nome;
-    private int quantidadeDeJogo;
+    private int quantidadeDeJogador;
     private int HoraDeJogo;
     private TipoDeJogo tipoDeJogo;
 
@@ -11,7 +15,7 @@ public class Jogo {
 
     public Jogo(String nome, int quantidadeDeJogo, int horaDeJogo, TipoDeJogo tipoDeJogo) {
         this.nome = nome;
-        this.quantidadeDeJogo = quantidadeDeJogo;
+        this.quantidadeDeJogador = quantidadeDeJogo;
         HoraDeJogo = horaDeJogo;
         this.tipoDeJogo = tipoDeJogo;
     }
@@ -24,12 +28,12 @@ public class Jogo {
         this.nome = nome;
     }
 
-    public int getQuantidadeDeJogo() {
-        return quantidadeDeJogo;
+    public int getQuantidadeDeJogador() {
+        return quantidadeDeJogador;
     }
 
-    public void setQuantidadeDeJogo(int quantidadeDeJogo) {
-        this.quantidadeDeJogo = quantidadeDeJogo;
+    public void setQuantidadeDeJogador(int quantidadeDeJogador) {
+        this.quantidadeDeJogador = quantidadeDeJogador;
     }
 
     public int getHoraDeJogo() {
