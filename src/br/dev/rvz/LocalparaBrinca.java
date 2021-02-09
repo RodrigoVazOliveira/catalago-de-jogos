@@ -5,5 +5,5 @@ package br.dev.rvz;
  * @author Rodrigo.vaz
  * */
 public enum LocalparaBrinca {
-    RUA, PASSEIO, QUADRA, RAMPA_SKATE,  CIRCUITO_BICICLETA;
+    CIDADE, LITORAL;
 }

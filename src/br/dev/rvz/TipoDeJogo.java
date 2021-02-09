@@ -5,5 +5,5 @@ package br.dev.rvz;
  * @author Rodrigo.vaz
  * */
 public enum TipoDeJogo {
-    ACAO, ESPORTE, RPG, MMO_RPG, LUTA, ESTRATEGIA, OUTROS;
+    TABULEIRO, VIDEOGAME, RUA;
 }
