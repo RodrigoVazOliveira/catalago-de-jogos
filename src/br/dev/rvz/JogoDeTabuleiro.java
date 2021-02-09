@@ -24,7 +24,7 @@ public class JogoDeTabuleiro extends Jogo {
 
     @Override
     public String toString() {
-        return "JogoDeTabuleiro{" +
+        return super.toString() + " JogoDeTabuleiro{" +
                 "quantidadeDePecas=" + quantidadeDePecas +
                 '}';
     }

@@ -25,7 +25,7 @@ public class JogoDeVideogame extends Jogo {
 
     @Override
     public String toString() {
-        return "JogoDeVideogame{" +
+        return super.toString() + " JogoDeVideogame{" +
                 "online=" + online +
                 '}';
     }
