@@ -22,4 +22,11 @@ public class JogoDeVideogame extends Jogo {
     public void setOnline(boolean online) {
         this.online = online;
     }
+
+    @Override
+    public String toString() {
+        return "JogoDeVideogame{" +
+                "online=" + online +
+                '}';
+    }
 }

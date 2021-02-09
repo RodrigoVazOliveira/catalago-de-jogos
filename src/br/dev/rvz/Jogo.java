@@ -51,4 +51,14 @@ public class Jogo {
     public void setTipoDeJogo(TipoDeJogo tipoDeJogo) {
         this.tipoDeJogo = tipoDeJogo;
     }
+
+    @Override
+    public String toString() {
+        return "Jogo{" +
+                "nome='" + nome + '\'' +
+                ", quantidadeDeJogador=" + quantidadeDeJogador +
+                ", HoraDeJogo=" + HoraDeJogo +
+                ", tipoDeJogo=" + tipoDeJogo +
+                '}';
+    }
 }

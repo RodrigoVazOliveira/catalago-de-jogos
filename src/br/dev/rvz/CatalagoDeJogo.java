@@ -21,4 +21,10 @@ public class CatalagoDeJogo {
     public void setCatalagoJogos(List<Jogo> catalagoJogos) {
         this.catalagoJogos = catalagoJogos;
     }
+
+    public void listar() {
+        for (Jogo jogo: catalagoJogos) {
+            IO.output(jogo.toString());
+        }
+    }
 }

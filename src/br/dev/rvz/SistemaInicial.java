@@ -10,8 +10,8 @@ public class SistemaInicial {
     private CatalagoDeJogo catalagoDeJogo;
     private int options;
 
-    public SistemaInicial(boolean run) {
-        this.run = run;
+    public SistemaInicial() {
+        this.run = true;
         catalagoDeJogo = new CatalagoDeJogo();
         while(run) {
             IO.output("1. Cadastro de jogo de tabuleiro\n2. Cadastro de jogo de video game.\n3. cadastro de jogo de rua.\n4. Listar os jogos.\n5. sair do sistema");
@@ -23,7 +23,11 @@ public class SistemaInicial {
             } else if (options == 3) {
                 adicionarJogoDeRua();
             } else if (options == 4) {
-
+                catalagoDeJogo.listar();
+            } else if (options == 5) {
+                run = false;
+            } else {
+                IO.output("opção invalida");
             }
         }
     }
@@ -64,7 +68,7 @@ public class SistemaInicial {
                     IO.input().nextInt(),
                     TipoDeJogo.RUA,
                     verificarJogoDeRuaPerigoso(IO.input().nextLine()),
-                    verificarJogoDeRuaLocal(IO.input().findInLine())
+                    verificarJogoDeRuaLocal(IO.input().nextLine())
             );
             catalagoDeJogo.getCatalagoJogos().add(jogoDeRua);
         }catch (RuntimeException e) {

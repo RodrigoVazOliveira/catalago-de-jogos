@@ -31,4 +31,12 @@ public class JogoDeRua extends Jogo{
     public void setLocalparaBrinca(LocalparaBrinca localparaBrinca) {
         this.localparaBrinca = localparaBrinca;
     }
+
+    @Override
+    public String toString() {
+        return "JogoDeRua{" +
+                "perigosa=" + perigosa +
+                ", localparaBrinca=" + localparaBrinca +
+                '}';
+    }
 }
